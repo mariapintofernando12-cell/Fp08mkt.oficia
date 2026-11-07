@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0e1a15;--mute:#5b6b63;--line:#e4eae6;--bg:#fff;--soft:#f5f8f6;--g:#0b7a4b;--gt:#e6f4ec}
+:root{--ink:#0a1020;--mute:#5a6578;--line:#e3e8f2;--bg:#fff;--soft:#f4f7fd;--g:#0a50ee;--gt:#e8efff}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:'Sora',system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -25,9 +25,13 @@ h2{font-size:clamp(1.7rem,4.5vw,2.6rem);font-weight:800;margin:10px 0 12px}
 
 header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;height:58px}
-.logo{font-weight:800;font-size:1.2rem;letter-spacing:-.04em}.logo b{color:var(--g)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:1.1rem;letter-spacing:-.03em}.logo b{color:var(--g)}.logo img{width:38px;height:38px;border-radius:50%}
 
-.hero{padding:90px 0 40px}
+.hero{padding:70px 0 40px}
+.biglogo{display:block;margin-bottom:26px;width:132px;height:132px;border-radius:50%;box-shadow:0 24px 50px -22px rgba(10,80,238,.55);animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-6px)}}
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.chips span{border:1px solid var(--line);background:var(--soft);border-radius:30px;padding:6px 14px;font-size:.78rem;font-weight:600;color:var(--ink)}
 .hero h1{font-size:clamp(2.2rem,7vw,4.2rem);font-weight:800;max-width:760px;margin:14px 0 18px}
 .hero h1 span{color:var(--g)}
 
@@ -40,9 +44,9 @@ header .wrap{display:flex;align-items:center;height:58px}
 .rail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:34px max(22px,calc((100vw - 1100px)/2 + 22px)) 26px;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab}
 .rail::-webkit-scrollbar{display:none}
 .rail.drag{scroll-snap-type:none;cursor:grabbing;scroll-behavior:auto}
-.card{flex:0 0 min(84vw,430px);scroll-snap-align:center;border:1px solid var(--line);border-radius:20px;background:#fff;overflow:hidden;box-shadow:0 20px 50px -28px rgba(14,26,21,.35);transform:scale(var(--s,1));opacity:var(--o,1);transition:box-shadow .4s;user-select:none}
+.card{flex:0 0 min(84vw,430px);scroll-snap-align:center;border:1px solid var(--line);border-radius:20px;background:#fff;overflow:hidden;box-shadow:0 20px 50px -28px rgba(10,16,32,.35);transform:scale(var(--s,1));opacity:var(--o,1);transition:box-shadow .4s;user-select:none}
 .bar{display:flex;align-items:center;gap:6px;padding:11px 14px;background:var(--soft);border-bottom:1px solid var(--line)}
-.bar i{width:9px;height:9px;border-radius:50%;background:#d4dcd7}
+.bar i{width:9px;height:9px;border-radius:50%;background:#d5dcec}
 .bar span{margin-left:8px;flex:1;background:#fff;border:1px solid var(--line);border-radius:8px;font-size:.7rem;padding:2px 10px;color:var(--mute);font-family:ui-monospace,Menlo,monospace}
 .photo{position:relative;height:250px;display:grid;place-items:center;overflow:hidden}
 .photo svg{width:62%;max-width:250px;transition:transform 1.4s cubic-bezier(.2,.7,.2,1)}
@@ -68,7 +72,7 @@ header .wrap{display:flex;align-items:center;height:58px}
 .adv{background:var(--soft);padding:90px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
 .box{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;transition:transform .5s,box-shadow .5s}
-.box:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(14,26,21,.3)}
+.box:hover{transform:translateY(-4px);box-shadow:0 18px 40px -24px rgba(10,16,32,.3)}
 .ico{width:44px;height:44px;border-radius:12px;background:var(--gt);display:grid;place-items:center;margin-bottom:14px}
 .ico svg{width:22px;height:22px;stroke:var(--g);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .box h3{font-size:1.05rem;margin-bottom:6px;letter-spacing:-.01em}
@@ -80,7 +84,7 @@ header .wrap{display:flex;align-items:center;height:58px}
 .cta .lead{margin:0 auto}
 .go{display:inline-flex;align-items:center;gap:12px;margin-top:34px;background:var(--g);color:#fff;text-decoration:none;font-weight:700;font-size:1.05rem;padding:18px 34px;border-radius:50px;transition:transform .4s,box-shadow .4s;font-family:inherit}
 .go svg{transition:transform .4s}
-.go:hover{transform:translateY(-3px);box-shadow:0 18px 36px -14px rgba(11,122,75,.6)}
+.go:hover{transform:translateY(-3px);box-shadow:0 18px 36px -14px rgba(10,80,238,.6)}
 .go:hover svg{transform:translateX(5px)}
 .go:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 footer{text-align:center;color:var(--mute);font-size:.8rem;padding:26px;border-top:1px solid var(--line)}
@@ -91,83 +95,85 @@ footer{text-align:center;color:var(--mute);font-size:.8rem;padding:26px;border-t
 </head>
 <body>
 
-<header><div class="wrap"><div class="logo">FP<b>08</b></div></div></header>
+<header><div class="wrap"><div class="logo"><img src="fotos/logo.png" alt="FP Fashion"><span>FP <b>Fashion</b></span></div></div></header>
 
 <section class="hero">
   <div class="wrap">
+    <img class="biglogo rv" src="fotos/logo.png" alt="FP Fashion — Moda sem limites">
     <div class="tag rv">01 — Exemplos</div>
-    <h1 class="rv">A sua loja ou serviço, <span>numa página web</span>.</h1>
-    <p class="lead rv">Veja como podem ficar as páginas. Deslize os blocos para o lado e descubra.</p>
+    <h1 class="rv">Veja o que pode vender <span>na sua própria página web</span>.</h1>
+    <p class="lead rv">Um exemplo real de loja de moda. Deslize os blocos para o lado e descubra.</p>
+    <div class="chips rv"><span>Roupas modernas</span><span>Qualidade garantida</span><span>Entrega em todo Moçambique</span></div>
   </div>
 </section>
 
 <section class="show">
   <div class="wrap head">
-    <div class="rv"><div class="tag">Páginas de exemplo</div><h2>Lojas e serviços</h2></div>
+    <div class="rv"><div class="tag">Páginas de exemplo</div><h2>A sua loja de moda online</h2></div>
     <div class="ctrl rv"><button id="prev" aria-label="Anterior">&larr;</button><button id="next" aria-label="Seguinte">&rarr;</button></div>
   </div>
 
   <div class="rail" id="rail">
 
     <article class="card">
-      <div class="bar"><i></i><i></i><i></i><span>sapataria.exemplo.com</span></div>
-      <div class="photo" style="background:linear-gradient(135deg,#e6f4ec,#cfe9da)">
-        <svg viewBox="0 0 200 140" fill="none"><ellipse cx="100" cy="126" rx="82" ry="7" fill="rgba(14,26,21,.1)"/><path d="M20 108h162c6 0 8 5 5 10-4 7-11 8-20 8H42c-14 0-22-8-22-18z" fill="#0e1a15"/><path d="M26 108C22 84 26 62 40 50L62 46C66 58 76 66 92 68C112 70 134 76 154 86C170 94 180 100 182 108Z" fill="#fff" stroke="#0e1a15" stroke-width="3.5" stroke-linejoin="round"/><path d="M40 50C46 58 56 58 62 46" stroke="#0e1a15" stroke-width="3.5" stroke-linecap="round"/><path d="M146 84C152 94 168 102 182 108" stroke="#0e1a15" stroke-width="3.5" stroke-linecap="round"/><path d="M86 70l10 8M98 73l10 8M110 76l10 8" stroke="#0e1a15" stroke-width="3.5" stroke-linecap="round"/><path d="M42 96C64 90 92 92 124 100" stroke="#0b7a4b" stroke-width="7" stroke-linecap="round"/></svg>
-        <img src="fotos/sapatos.jpg" alt="" loading="lazy" onerror="this.remove()">
+      <div class="bar"><i></i><i></i><i></i><span>fpfashion.exemplo.com/camisas</span></div>
+      <div class="photo" style="background:linear-gradient(135deg,#e8efff,#cfdcff)">
+        <svg viewBox="0 0 200 140" fill="none"><ellipse cx="100" cy="130" rx="60" ry="5" fill="rgba(10,16,32,.1)"/><path d="M72 14L30 32l14 30 18-9v72h76V53l18 9 14-30-42-18c-4 11-16 18-28 18S76 25 72 14z" fill="#0a1020" stroke="#0a1020" stroke-width="3" stroke-linejoin="round"/><path d="M72 14c4 11 16 18 28 18s24-7 28-18" stroke="#0a50ee" stroke-width="4" fill="none"/><text x="100" y="92" text-anchor="middle" font-family="Sora,Arial,sans-serif" font-weight="800" font-style="italic" font-size="30" fill="#fff">F<tspan fill="#2f6bff">P</tspan></text></svg>
+        <img src="fotos/camisas.jpg" alt="" loading="lazy" onerror="this.remove()">
       </div>
-      <div class="info"><div class="cat">Loja · Calçado</div><h3>Sapataria</h3><p>Ténis e sapatos para toda a família, com pedido direto no WhatsApp.</p>
-        <div class="items"><div class="it"><b>Ténis Urban</b><em>1.800 MT</em></div><div class="it"><b>Sapato Clássico</b><em>2.400 MT</em></div></div>
+      <div class="info"><div class="cat">Moda · Camisas</div><h3>Camisas</h3><p>Camisas modernas para todos os estilos, com o preço à vista.</p>
+        <div class="items"><div class="it"><b>Camisa Preta FP</b><em>850 MT</em></div><div class="it"><b>Camisa Branca Azul</b><em>750 MT</em></div></div>
         <span class="buy">Comprar</span></div>
     </article>
 
     <article class="card">
-      <div class="bar"><i></i><i></i><i></i><span>aparelhos.exemplo.com</span></div>
-      <div class="photo" style="background:linear-gradient(135deg,#e8eef9,#d3def3)">
-        <svg viewBox="0 0 200 140" fill="none"><rect x="66" y="10" width="68" height="120" rx="14" fill="#0e1a15"/><rect x="72" y="20" width="56" height="98" rx="7" fill="#fff"/><rect x="78" y="28" width="44" height="30" rx="5" fill="#cfe9da"/><rect x="78" y="64" width="44" height="6" rx="3" fill="#d4dcd7"/><rect x="78" y="76" width="30" height="6" rx="3" fill="#d4dcd7"/><rect x="78" y="94" width="44" height="14" rx="7" fill="#0b7a4b"/><rect x="92" y="13" width="16" height="3" rx="1.5" fill="#3a4a42"/><circle cx="158" cy="96" r="18" fill="#fff" stroke="#0e1a15" stroke-width="3.5"/><circle cx="158" cy="96" r="9" fill="#0b7a4b"/></svg>
-        <img src="fotos/aparelhos.jpg" alt="" loading="lazy" onerror="this.remove()">
+      <div class="bar"><i></i><i></i><i></i><span>fpfashion.exemplo.com/oculos</span></div>
+      <div class="photo" style="background:linear-gradient(135deg,#f4f7fd,#dbe5fb)">
+        <svg viewBox="0 0 200 140" fill="none"><ellipse cx="100" cy="112" rx="74" ry="5" fill="rgba(10,16,32,.1)"/><path d="M22 52h72c0 24-12 42-36 42S22 78 22 52z" fill="#0a1020"/><path d="M106 52h72c0 26-12 42-36 42s-36-16-36-42z" fill="#0a1020"/><path d="M94 58c5-6 7-6 12 0" stroke="#0a1020" stroke-width="5" stroke-linecap="round"/><path d="M22 54L6 46M178 54l16-8" stroke="#0a1020" stroke-width="5" stroke-linecap="round"/><path d="M34 62l14-8M118 62l14-8" stroke="#2f6bff" stroke-width="5" stroke-linecap="round"/><path d="M42 74l8-5M126 74l8-5" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".7"/></svg>
+        <img src="fotos/oculos.jpg" alt="" loading="lazy" onerror="this.remove()">
       </div>
-      <div class="info"><div class="cat">Loja · Tecnologia</div><h3>Loja de Aparelhos</h3><p>Telemóveis, acessórios e eletrónicos com preços visíveis.</p>
-        <div class="items"><div class="it"><b>Smartphone 128 GB</b><em>9.500 MT</em></div><div class="it"><b>Auriculares</b><em>750 MT</em></div></div>
+      <div class="info"><div class="cat">Moda · Acessórios</div><h3>Óculos de Sol</h3><p>Estilo e proteção, com fotos e pedido direto no WhatsApp.</p>
+        <div class="items"><div class="it"><b>Óculos Clássico</b><em>600 MT</em></div><div class="it"><b>Óculos Aviador</b><em>900 MT</em></div></div>
         <span class="buy">Comprar</span></div>
     </article>
 
     <article class="card">
-      <div class="bar"><i></i><i></i><i></i><span>servicos.exemplo.com</span></div>
-      <div class="photo" style="background:linear-gradient(135deg,#fdf1dc,#f7e0b5)">
-        <svg viewBox="0 0 200 140" fill="none"><circle cx="100" cy="70" r="38" stroke="#0e1a15" stroke-width="15" stroke-dasharray="11 9.2"/><circle cx="100" cy="70" r="30" fill="#fff" stroke="#0e1a15" stroke-width="6"/><circle cx="100" cy="70" r="11" fill="#0b7a4b"/><circle cx="152" cy="108" r="17" fill="#0b7a4b"/><path d="M144 108l6 6 11-12" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <img src="fotos/servicos.jpg" alt="" loading="lazy" onerror="this.remove()">
+      <div class="bar"><i></i><i></i><i></i><span>fpfashion.exemplo.com/hoodies</span></div>
+      <div class="photo" style="background:linear-gradient(135deg,#e6ecfb,#c9d8fb)">
+        <svg viewBox="0 0 200 140" fill="none"><ellipse cx="100" cy="132" rx="60" ry="5" fill="rgba(10,16,32,.1)"/><path d="M66 36c6-14 18-20 34-20s28 6 34 20l36 20-12 36-18-8v44H60V84l-18 8-12-36z" fill="#0a1020"/><path d="M78 30c4 20 40 20 44 0-6-8-14-12-22-12s-16 4-22 12z" fill="#16264a"/><path d="M92 46v18M108 46v18" stroke="#fff" stroke-width="3" stroke-linecap="round"/><path d="M76 108h48l-6-18H82z" fill="#16264a"/><text x="100" y="84" text-anchor="middle" font-family="Sora,Arial,sans-serif" font-weight="800" font-style="italic" font-size="22" fill="#fff">F<tspan fill="#2f6bff">P</tspan></text></svg>
+        <img src="fotos/hoodies.jpg" alt="" loading="lazy" onerror="this.remove()">
       </div>
-      <div class="info"><div class="cat">Serviços · Técnicos</div><h3>Serviços em Casa</h3><p>Mostre o que faz, os preços e deixe o cliente pedir um orçamento.</p>
-        <div class="items"><div class="it"><b>Canalização</b><em>desde 600 MT</em></div><div class="it"><b>Eletricidade</b><em>desde 800 MT</em></div></div>
-        <span class="buy">Pedir orçamento</span></div>
-    </article>
-
-    <article class="card">
-      <div class="bar"><i></i><i></i><i></i><span>moda.exemplo.com</span></div>
-      <div class="photo" style="background:linear-gradient(135deg,#fbe9ee,#f4cfda)">
-        <svg viewBox="0 0 200 140" fill="none"><path d="M100 24c0-5 8-6 8-12a8 8 0 1 0-16 0" stroke="#0e1a15" stroke-width="3.5" stroke-linecap="round"/><path d="M100 24L52 52c-3 2-2 6 2 6h92c4 0 5-4 2-6z" stroke="#0e1a15" stroke-width="3.5" stroke-linejoin="round"/><path d="M82 62h36l8 26-9 8 20 36H63l20-36-9-8z" transform="translate(0 -2)" fill="#0b7a4b" stroke="#0e1a15" stroke-width="3.5" stroke-linejoin="round"/><path d="M80 84h40" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/></svg>
-        <img src="fotos/moda.jpg" alt="" loading="lazy" onerror="this.remove()">
-      </div>
-      <div class="info"><div class="cat">Loja · Moda</div><h3>Loja de Moda</h3><p>Vestidos, joias e acessórios organizados por categoria.</p>
-        <div class="items"><div class="it"><b>Vestido Verão</b><em>1.500 MT</em></div><div class="it"><b>Conjunto Elegante</b><em>2.200 MT</em></div></div>
+      <div class="info"><div class="cat">Moda · Casacos</div><h3>Hoodies</h3><p>Hoodies com a marca em destaque, nas cores da loja.</p>
+        <div class="items"><div class="it"><b>Hoodie FP Preto</b><em>1.800 MT</em></div><div class="it"><b>Hoodie FP Azul</b><em>1.700 MT</em></div></div>
         <span class="buy">Comprar</span></div>
     </article>
 
     <article class="card">
-      <div class="bar"><i></i><i></i><i></i><span>escolar.exemplo.com</span></div>
-      <div class="photo" style="background:linear-gradient(135deg,#ece9fb,#d8d2f5)">
-        <svg viewBox="0 0 200 140" fill="none"><rect x="46" y="34" width="92" height="82" rx="8" fill="#fff" stroke="#0e1a15" stroke-width="3.5"/><path d="M46 52h92" stroke="#0e1a15" stroke-width="3.5"/><rect x="46" y="34" width="14" height="82" rx="6" fill="#0b7a4b" stroke="#0e1a15" stroke-width="3.5"/><path d="M76 72h46M76 86h34" stroke="#d4dcd7" stroke-width="5" stroke-linecap="round"/><path d="M150 40l14 14-44 60-18 4 4-18z" fill="#fff" stroke="#0e1a15" stroke-width="3.5" stroke-linejoin="round" transform="translate(4 -2)"/></svg>
-        <img src="fotos/escolar.jpg" alt="" loading="lazy" onerror="this.remove()">
+      <div class="bar"><i></i><i></i><i></i><span>fpfashion.exemplo.com/bones</span></div>
+      <div class="photo" style="background:linear-gradient(135deg,#eef3ff,#d6e2ff)">
+        <svg viewBox="0 0 200 140" fill="none"><ellipse cx="100" cy="116" rx="76" ry="5" fill="rgba(10,16,32,.1)"/><path d="M36 92C36 54 64 32 100 32s64 22 64 60z" fill="#0a50ee"/><path d="M100 32v60" stroke="#0a1020" stroke-opacity=".15" stroke-width="3"/><circle cx="100" cy="31" r="5" fill="#0a1020"/><path d="M30 92h140c14 2 22 7 22 13-32 7-92 7-162 0 0-7 0-12 0-13z" fill="#0a1020"/><text x="100" y="76" text-anchor="middle" font-family="Sora,Arial,sans-serif" font-weight="800" font-style="italic" font-size="26" fill="#fff">FP</text></svg>
+        <img src="fotos/bones.jpg" alt="" loading="lazy" onerror="this.remove()">
       </div>
-      <div class="info"><div class="cat">Loja · Escolar</div><h3>Material Escolar</h3><p>Kits e produtos escolares com compra rápida por WhatsApp.</p>
-        <div class="items"><div class="it"><b>Kit escolar completo</b><em>450 MT</em></div><div class="it"><b>Mochila</b><em>900 MT</em></div></div>
+      <div class="info"><div class="cat">Moda · Acessórios</div><h3>Bonés</h3><p>Bonés para completar o visual, com várias cores e tamanhos.</p>
+        <div class="items"><div class="it"><b>Boné FP Azul</b><em>450 MT</em></div><div class="it"><b>Boné Aba Reta</b><em>500 MT</em></div></div>
+        <span class="buy">Comprar</span></div>
+    </article>
+
+    <article class="card">
+      <div class="bar"><i></i><i></i><i></i><span>fpfashion.exemplo.com/novidades</span></div>
+      <div class="photo" style="background:linear-gradient(135deg,#f4f7fd,#dfe7fa)">
+        <svg viewBox="0 0 200 140" fill="none"><path d="M100 26c0-6 9-7 9-14a9 9 0 1 0-18 0" stroke="#0a1020" stroke-width="3.5" stroke-linecap="round"/><path d="M100 26L40 60c-4 2-3 7 2 7h116c5 0 6-5 2-7z" stroke="#0a1020" stroke-width="3.5" stroke-linejoin="round"/><path d="M80 70h40l-6 16H86z" fill="#0a1020"/><path d="M100 126L78 100h44z" fill="#0a50ee"/><path d="M78 100l8-12h28l8 12M86 88l14 38 14-38" stroke="#0a1020" stroke-width="3" stroke-linejoin="round"/></svg>
+        <img src="fotos/novidades.jpg" alt="" loading="lazy" onerror="this.remove()">
+      </div>
+      <div class="info"><div class="cat">Moda · Coleção</div><h3>Novidades</h3><p>Mostre as peças novas da coleção e atraia quem já é cliente.</p>
+        <div class="items"><div class="it"><b>Conjunto FP</b><em>2.400 MT</em></div><div class="it"><b>Pulseira Estilo</b><em>300 MT</em></div></div>
         <span class="buy">Comprar</span></div>
     </article>
 
   </div>
   <div class="dots" id="dots"></div>
   <div class="hint" id="hint"><span>Deslize para o lado</span><svg width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M1 6h19M15 1l5 5-5 5"/></svg></div>
-  <p class="note">Exemplos ilustrativos. Nomes e preços são apenas demonstração.</p>
+  <p class="note">Exemplo ilustrativo. Os preços são apenas demonstração.</p>
 </section>
 
 <section class="adv">
@@ -195,7 +201,7 @@ footer{text-align:center;color:var(--mute);font-size:.8rem;padding:26px;border-t
   </div>
 </section>
 
-<footer>FP08 &copy; 2026</footer>
+<footer>Página de exemplo criada pela FP08 &copy; 2026</footer>
 
 <script>
 // 👉 MUDA AQUI: número de WhatsApp com código do país, sem + nem espaços
